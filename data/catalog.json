@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "categories": [
+    {
+      "id": "ecosystem",
+      "title": {
+        "zh-Hans": "生态",
+        "en": "Ecosystem"
+      }
+    },
+    {
+      "id": "defi",
+      "title": {
+        "zh-Hans": "DeFi",
+        "en": "DeFi"
+      }
+    },
+    {
+      "id": "tools",
+      "title": {
+        "zh-Hans": "工具",
+        "en": "Tools"
+      }
+    }
+  ],
+  "banners": [
+    {
+      "id": "ast-feature",
+      "title": {
+        "zh-Hans": "AST Dapp",
+        "en": "AST Dapp"
+      },
+      "subtitle": {
+        "zh-Hans": "访问 Sui 主网的 AST 应用",
+        "en": "Explore AST on Sui"
+      },
+      "image": "assets/banners/ast-orbit-v1.webp",
+      "appId": "ast"
+    }
+  ],
+  "apps": [
+    {
+      "id": "ast",
+      "name": {
+        "zh-Hans": "AST Dapp",
+        "en": "AST Dapp"
+      },
+      "summary": {
+        "zh-Hans": "AST 生态应用",
+        "en": "AST ecosystem app"
+      },
+      "url": "https://www.astai.org/",
+      "icon": "assets/apps/ast-v1.webp",
+      "categoryIds": [
+        "ecosystem"
+      ],
+      "chains": [
+        "sui"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "uniswap",
+      "name": {
+        "zh-Hans": "Uniswap",
+        "en": "Uniswap"
+      },
+      "summary": {
+        "zh-Hans": "去中心化代币兑换",
+        "en": "Decentralized token swaps"
+      },
+      "url": "https://app.uniswap.org/",
+      "icon": "assets/apps/uniswap-v1.webp",
+      "categoryIds": [
+        "defi"
+      ],
+      "chains": [
+        "ethereum",
+        "base",
+        "arbitrum"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "aave",
+      "name": {
+        "zh-Hans": "Aave",
+        "en": "Aave"
+      },
+      "summary": {
+        "zh-Hans": "链上资产借贷市场",
+        "en": "On-chain asset lending markets"
+      },
+      "url": "https://app.aave.com/",
+      "icon": "assets/apps/aave-v1.webp",
+      "categoryIds": [
+        "defi"
+      ],
+      "chains": [
+        "ethereum",
+        "arbitrum",
+        "base"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "suiscan",
+      "name": {
+        "zh-Hans": "Suiscan",
+        "en": "Suiscan"
+      },
+      "summary": {
+        "zh-Hans": "查看 Sui 主网的交易与对象",
+        "en": "Explore Sui transactions and objects"
+      },
+      "url": "https://suiscan.xyz/mainnet/home",
+      "icon": "assets/apps/suiscan-v1.webp",
+      "categoryIds": [
+        "tools"
+      ],
+      "chains": [
+        "sui"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "blockscout",
+      "name": {
+        "zh-Hans": "Blockscout",
+        "en": "Blockscout"
+      },
+      "summary": {
+        "zh-Hans": "查询以太坊交易和地址",
+        "en": "Explore Ethereum transactions and addresses"
+      },
+      "url": "https://eth.blockscout.com/",
+      "icon": "assets/apps/blockscout-v1.webp",
+      "categoryIds": [
+        "tools"
+      ],
+      "chains": [
+        "ethereum"
+      ],
+      "status": "active"
+    }
+  ],
+  "homeSections": [
+    {
+      "id": "popular",
+      "title": {
+        "zh-Hans": "热门应用",
+        "en": "Popular apps"
+      },
+      "layout": "list",
+      "appIds": [
+        "ast",
+        "uniswap",
+        "aave"
+      ]
+    },
+    {
+      "id": "onchain-tools",
+      "title": {
+        "zh-Hans": "链上工具",
+        "en": "On-chain tools"
+      },
+      "layout": "tiles",
+      "appIds": [
+        "suiscan",
+        "blockscout"
+      ]
+    }
+  ]
+}

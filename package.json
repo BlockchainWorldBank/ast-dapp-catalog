@@ -1,0 +1,12 @@
+{
+  "name": "ast-dapp-catalog",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "check": "node scripts/validate-catalog.mjs",
+    "build": "node scripts/validate-catalog.mjs --build"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0"
+  }
+}
