@@ -8,7 +8,7 @@
 2. 增加 `revision`。下架应用时将 `status` 设为 `disabled`，恢复旧内容时也使用新的 `revision`。
 3. 核对目标域名、来源和应用支持的链后提交 PR。合并到 `main` 后，Actions 校验并发布新目录。
 
-结构由 [JSON Schema](schema/catalog.schema.json) 定义。`startsAt` 和 `endsAt` 采用 UTC。Banner 通过 `appId` 指向应用条目。每个条目至少提供简体中文和英文。链 ID 依据 [浏览器链键快照](schema/browser-chains.json)，客户端再按自身浏览器支持的网络筛选。仓库只保存公开应用信息和图片。
+结构由 [JSON Schema](schema/catalog.schema.json) 定义。`startsAt` 和 `endsAt` 采用 UTC。Banner 通过 `appId` 指向应用条目。每个条目至少提供简体中文和英文。链 ID 依据 [浏览器链键快照](schema/browser-chains.json)，实际连接和签名仍由原生浏览器按其支持的网络处理。仓库只保存公开应用信息和图片。
 
 本地校验运行 `npm ci --ignore-scripts`，再运行 `npm run check`。运行 `npm run build` 生成可发布目录。
 
@@ -18,3 +18,11 @@
 - [Aave 入口与网络](https://aave.com/help/aave-101/accessing-aave)
 - [Sui 主网及浏览器](https://docs.sui.io/develop/sui-architecture/networks)
 - [Blockscout](https://eth.blockscout.com/)
+
+### DM Wallet 发现页扩展
+
+Revision 2 增加 AI、预测、RWA、永续合约、Meme 等分类和分组列表，包含 18 个应用、7 个首页分组和 2 个 Banner。首页与收藏由客户端提供，不写入分类配置。
+
+Banner 保留原字段，并增加可选的多语言 `eyebrow`（顶部标签）、`badge`（角标）、`cta`（按钮文案）和 `style`（`image` 或 `orbit`）字段。`orbit` 由两端用 DM 紫色绘制轨道图形，正文和按钮仍来自配置；省略时使用图片。AST 文案为“AST超级合约流动池 / 连接生态 · 探索链上流动性 / 立即进入”。
+
+公开应用图标来源见 [图标来源](assets/SOURCES.md)。配置通过校验后，在钱包仓库运行 `python3 scripts/sync-dapp-catalog.py "../DM Wallet Catalog"` 同步两端内置快照；运行相同命令加 `--check` 可核对一致性。原有 GitHub Pages 发布流程保持不变。

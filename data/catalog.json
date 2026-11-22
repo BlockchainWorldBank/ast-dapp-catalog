@@ -1,12 +1,33 @@
 {
   "schemaVersion": 1,
-  "revision": 1,
+  "revision": 2,
   "categories": [
     {
-      "id": "ecosystem",
+      "id": "ai",
       "title": {
-        "zh-Hans": "生态",
-        "en": "Ecosystem"
+        "zh-Hans": "AI",
+        "en": "AI"
+      }
+    },
+    {
+      "id": "prediction",
+      "title": {
+        "zh-Hans": "预测",
+        "en": "Prediction"
+      }
+    },
+    {
+      "id": "rwa",
+      "title": {
+        "zh-Hans": "RWA",
+        "en": "RWA"
+      }
+    },
+    {
+      "id": "perpetuals",
+      "title": {
+        "zh-Hans": "永续合约",
+        "en": "Perpetuals"
       }
     },
     {
@@ -14,6 +35,20 @@
       "title": {
         "zh-Hans": "DeFi",
         "en": "DeFi"
+      }
+    },
+    {
+      "id": "meme",
+      "title": {
+        "zh-Hans": "Meme",
+        "en": "Meme"
+      }
+    },
+    {
+      "id": "ecosystem",
+      "title": {
+        "zh-Hans": "生态",
+        "en": "Ecosystem"
       }
     },
     {
@@ -28,27 +63,66 @@
     {
       "id": "ast-feature",
       "title": {
-        "zh-Hans": "AST Dapp",
-        "en": "AST Dapp"
+        "zh-Hans": "AST超级合约流动池",
+        "en": "AST Super Contract Liquidity Pool"
       },
       "subtitle": {
-        "zh-Hans": "访问 Sui 主网的 AST 应用",
-        "en": "Explore AST on Sui"
+        "zh-Hans": "连接生态 · 探索链上流动性",
+        "en": "Connect ecosystems · Explore on-chain liquidity"
+      },
+      "eyebrow": {
+        "zh-Hans": "DMAST · AST",
+        "en": "DMAST · AST"
+      },
+      "badge": {
+        "zh-Hans": "流动池",
+        "en": "Liquidity"
+      },
+      "cta": {
+        "zh-Hans": "立即进入",
+        "en": "Explore now"
       },
       "image": "assets/banners/ast-orbit-v1.webp",
-      "appId": "ast"
+      "appId": "ast",
+      "style": "orbit"
+    },
+    {
+      "id": "defi-feature",
+      "title": {
+        "zh-Hans": "探索多链 DeFi",
+        "en": "Explore multi-chain DeFi"
+      },
+      "subtitle": {
+        "zh-Hans": "发现应用 · 连接链上世界",
+        "en": "Discover apps · Connect on-chain"
+      },
+      "eyebrow": {
+        "zh-Hans": "DM WALLET · DISCOVER",
+        "en": "DM WALLET · DISCOVER"
+      },
+      "badge": {
+        "zh-Hans": "DeFi",
+        "en": "DeFi"
+      },
+      "cta": {
+        "zh-Hans": "立即探索",
+        "en": "Explore now"
+      },
+      "image": "assets/banners/ast-orbit-v1.webp",
+      "appId": "uniswap",
+      "style": "orbit"
     }
   ],
   "apps": [
     {
       "id": "ast",
       "name": {
-        "zh-Hans": "AST Dapp",
-        "en": "AST Dapp"
+        "zh-Hans": "AST 超级合约流动池",
+        "en": "AST Super Contract Liquidity Pool"
       },
       "summary": {
-        "zh-Hans": "AST 生态应用",
-        "en": "AST ecosystem app"
+        "zh-Hans": "连接生态 · 探索链上流动性",
+        "en": "Connect ecosystems · Explore on-chain liquidity"
       },
       "url": "https://www.astai.org/",
       "icon": "assets/apps/ast-v1.webp",
@@ -71,7 +145,7 @@
         "en": "Decentralized token swaps"
       },
       "url": "https://app.uniswap.org/",
-      "icon": "assets/apps/uniswap-v1.webp",
+      "icon": "assets/apps/uniswap-v2.png",
       "categoryIds": [
         "defi"
       ],
@@ -93,7 +167,7 @@
         "en": "On-chain asset lending markets"
       },
       "url": "https://app.aave.com/",
-      "icon": "assets/apps/aave-v1.webp",
+      "icon": "assets/apps/aave-v2.png",
       "categoryIds": [
         "defi"
       ],
@@ -115,7 +189,7 @@
         "en": "Explore Sui transactions and objects"
       },
       "url": "https://suiscan.xyz/mainnet/home",
-      "icon": "assets/apps/suiscan-v1.webp",
+      "icon": "assets/apps/suiscan-v2.png",
       "categoryIds": [
         "tools"
       ],
@@ -135,12 +209,291 @@
         "en": "Explore Ethereum transactions and addresses"
       },
       "url": "https://eth.blockscout.com/",
-      "icon": "assets/apps/blockscout-v1.webp",
+      "icon": "assets/apps/blockscout-v2.png",
       "categoryIds": [
         "tools"
       ],
       "chains": [
         "ethereum"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "hyperliquid",
+      "name": {
+        "zh-Hans": "Hyperliquid",
+        "en": "Hyperliquid"
+      },
+      "summary": {
+        "zh-Hans": "高性能去中心化永续合约交易",
+        "en": "Decentralized perpetual trading"
+      },
+      "url": "https://app.hyperliquid.xyz/trade",
+      "icon": "assets/apps/hyperliquid-v1.png",
+      "categoryIds": [
+        "perpetuals",
+        "defi"
+      ],
+      "chains": [
+        "hyperliquid"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "pancakeswap",
+      "name": {
+        "zh-Hans": "PancakeSwap",
+        "en": "PancakeSwap"
+      },
+      "summary": {
+        "zh-Hans": "多链去中心化交易与流动性",
+        "en": "Multi-chain swaps and liquidity"
+      },
+      "url": "https://pancakeswap.finance/",
+      "icon": "assets/apps/pancakeswap-v1.png",
+      "categoryIds": [
+        "defi",
+        "meme"
+      ],
+      "chains": [
+        "smartchain",
+        "ethereum",
+        "base"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "curve",
+      "name": {
+        "zh-Hans": "Curve",
+        "en": "Curve"
+      },
+      "summary": {
+        "zh-Hans": "稳定币兑换与链上流动性",
+        "en": "Stablecoin swaps and liquidity"
+      },
+      "url": "https://curve.finance/",
+      "icon": "assets/apps/curve-v1.webp",
+      "categoryIds": [
+        "defi"
+      ],
+      "chains": [
+        "ethereum"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "virtuals",
+      "name": {
+        "zh-Hans": "Virtuals Protocol",
+        "en": "Virtuals Protocol"
+      },
+      "summary": {
+        "zh-Hans": "创建与探索链上 AI 智能体",
+        "en": "Explore on-chain AI agents"
+      },
+      "url": "https://app.virtuals.io/",
+      "icon": "assets/apps/virtuals-v1.png",
+      "categoryIds": [
+        "ai"
+      ],
+      "chains": [
+        "base"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "olas",
+      "name": {
+        "zh-Hans": "Olas",
+        "en": "Olas"
+      },
+      "summary": {
+        "zh-Hans": "探索自主 AI 智能体生态",
+        "en": "Explore autonomous AI agents"
+      },
+      "url": "https://olas.network/",
+      "icon": "assets/apps/olas-v1.png",
+      "categoryIds": [
+        "ai",
+        "tools"
+      ],
+      "chains": [
+        "ethereum",
+        "gnosis"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "four-meme",
+      "name": {
+        "zh-Hans": "Four.Meme",
+        "en": "Four.Meme"
+      },
+      "summary": {
+        "zh-Hans": "基于 BNB Chain 的代币发行平台",
+        "en": "Token launch platform on BNB Chain"
+      },
+      "url": "https://four.meme/",
+      "icon": "assets/apps/four-meme-v1.webp",
+      "categoryIds": [
+        "meme"
+      ],
+      "chains": [
+        "smartchain"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gmgn",
+      "name": {
+        "zh-Hans": "GMGN.AI",
+        "en": "GMGN.AI"
+      },
+      "summary": {
+        "zh-Hans": "多链代币与链上地址数据分析",
+        "en": "Multi-chain token and wallet analytics"
+      },
+      "url": "https://gmgn.ai/",
+      "icon": "assets/apps/gmgn-v1.png",
+      "categoryIds": [
+        "meme",
+        "tools"
+      ],
+      "chains": [
+        "solana",
+        "smartchain",
+        "base"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "dexscreener",
+      "name": {
+        "zh-Hans": "DEX Screener",
+        "en": "DEX Screener"
+      },
+      "summary": {
+        "zh-Hans": "多链 DEX 行情与代币数据",
+        "en": "Multi-chain DEX market data"
+      },
+      "url": "https://dexscreener.com/",
+      "icon": "assets/apps/dexscreener-v1.png",
+      "categoryIds": [
+        "meme",
+        "tools"
+      ],
+      "chains": [
+        "ethereum",
+        "solana",
+        "smartchain"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "defillama",
+      "name": {
+        "zh-Hans": "DefiLlama",
+        "en": "DefiLlama"
+      },
+      "summary": {
+        "zh-Hans": "DeFi 协议、流动性与链上数据",
+        "en": "DeFi protocols and on-chain analytics"
+      },
+      "url": "https://defillama.com/",
+      "icon": "assets/apps/defillama-v1.png",
+      "categoryIds": [
+        "tools",
+        "defi"
+      ],
+      "chains": [
+        "ethereum",
+        "sui",
+        "solana"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "polymarket",
+      "name": {
+        "zh-Hans": "Polymarket",
+        "en": "Polymarket"
+      },
+      "summary": {
+        "zh-Hans": "探索链上事件预测市场",
+        "en": "Explore on-chain prediction markets"
+      },
+      "url": "https://polymarket.com/",
+      "icon": "assets/apps/polymarket-v1.png",
+      "categoryIds": [
+        "prediction"
+      ],
+      "chains": [
+        "polygon"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "ondo",
+      "name": {
+        "zh-Hans": "Ondo Finance",
+        "en": "Ondo Finance"
+      },
+      "summary": {
+        "zh-Hans": "探索现实世界资产上链生态",
+        "en": "Explore tokenized real-world assets"
+      },
+      "url": "https://ondo.finance/",
+      "icon": "assets/apps/ondo-v1.png",
+      "categoryIds": [
+        "rwa"
+      ],
+      "chains": [
+        "ethereum"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "pendle",
+      "name": {
+        "zh-Hans": "Pendle",
+        "en": "Pendle"
+      },
+      "summary": {
+        "zh-Hans": "链上收益与流动性市场",
+        "en": "On-chain yield and liquidity markets"
+      },
+      "url": "https://app.pendle.finance/",
+      "icon": "assets/apps/pendle-v1.png",
+      "categoryIds": [
+        "rwa",
+        "defi"
+      ],
+      "chains": [
+        "ethereum",
+        "arbitrum"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "gmx",
+      "name": {
+        "zh-Hans": "GMX",
+        "en": "GMX"
+      },
+      "summary": {
+        "zh-Hans": "去中心化永续合约交易",
+        "en": "Decentralized perpetual markets"
+      },
+      "url": "https://app.gmx.io/",
+      "icon": "assets/apps/gmx-v1.webp",
+      "categoryIds": [
+        "perpetuals",
+        "defi"
+      ],
+      "chains": [
+        "arbitrum",
+        "avalanchec"
       ],
       "status": "active"
     }
@@ -149,26 +502,95 @@
     {
       "id": "popular",
       "title": {
-        "zh-Hans": "热门应用",
-        "en": "Popular apps"
+        "zh-Hans": "热门",
+        "en": "Popular"
       },
       "layout": "list",
       "appIds": [
-        "ast",
+        "hyperliquid",
         "uniswap",
+        "pancakeswap",
+        "gmx",
+        "curve",
         "aave"
       ]
     },
     {
-      "id": "onchain-tools",
+      "id": "community-tools",
       "title": {
-        "zh-Hans": "链上工具",
-        "en": "On-chain tools"
+        "zh-Hans": "社区热门工具",
+        "en": "Community tools"
       },
-      "layout": "tiles",
+      "layout": "list",
       "appIds": [
+        "defillama",
+        "gmgn",
+        "ast",
         "suiscan",
-        "blockscout"
+        "blockscout",
+        "dexscreener"
+      ]
+    },
+    {
+      "id": "ai-tools",
+      "title": {
+        "zh-Hans": "AI Tools",
+        "en": "AI Tools"
+      },
+      "layout": "list",
+      "appIds": [
+        "virtuals",
+        "olas"
+      ]
+    },
+    {
+      "id": "bnb-meme",
+      "title": {
+        "zh-Hans": "BNB Chain Meme 季",
+        "en": "BNB Chain Meme"
+      },
+      "layout": "list",
+      "appIds": [
+        "four-meme",
+        "gmgn",
+        "pancakeswap"
+      ]
+    },
+    {
+      "id": "meme-tools",
+      "title": {
+        "zh-Hans": "Memecoin热门工具",
+        "en": "Memecoin tools"
+      },
+      "layout": "list",
+      "appIds": [
+        "four-meme",
+        "gmgn",
+        "dexscreener"
+      ]
+    },
+    {
+      "id": "rwa-markets",
+      "title": {
+        "zh-Hans": "RWA 与链上收益",
+        "en": "RWA & on-chain yield"
+      },
+      "layout": "list",
+      "appIds": [
+        "ondo",
+        "pendle",
+        "aave"
+      ]
+    },
+    {
+      "id": "prediction-markets",
+      "title": {
+        "zh-Hans": "预测市场",
+        "en": "Prediction markets"
+      },
+      "layout": "list",
+      "appIds": [
+        "polymarket"
       ]
     }
   ]

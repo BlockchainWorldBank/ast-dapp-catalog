@@ -28,7 +28,11 @@
           "image": { "$ref": "#/definitions/image" },
           "appId": { "$ref": "#/definitions/id" },
           "startsAt": { "$ref": "#/definitions/utc" },
-          "endsAt": { "$ref": "#/definitions/utc" }
+          "endsAt": { "$ref": "#/definitions/utc" },
+          "eyebrow": { "$ref": "#/definitions/localized" },
+          "badge": { "$ref": "#/definitions/localized" },
+          "cta": { "$ref": "#/definitions/localized" },
+          "style": { "enum": ["image", "orbit"] }
         }
       }
     },
