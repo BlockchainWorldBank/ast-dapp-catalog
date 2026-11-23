@@ -1,12 +1,17 @@
 # Discovery banner artwork
 
-The editable SVG sources in `banners/` produce the four versioned WebP backgrounds in `assets/banners/`. All canvases are 1536×864. The left half intentionally stays quiet: the wallet renders the configured localized heading, subtitle, badge and CTA over that area. Do not bake translated copy or a second CTA into the artwork.
+The current version-2 SVG sources in `banners/` produce five per-project WebP backgrounds in `assets/banners/`. All canvases are 1536×864. The left half is reserved for the wallet’s localized heading, subtitle, badge and CTA. Version-1 files remain available for previously published catalogs.
 
-- **DMAST:** teal network connections, a purple exchange panel and the existing green DMAST mark.
-- **HYPE / Hyperliquid:** mint orbital liquidity rings and the Hyperliquid mark, on the wallet’s dark purple base.
-- **PancakeSwap:** a warm gold and cyan token composition with the official rabbit icon.
-- **ASTER:** a violet and rose geometric market emblem around the official ASTER icon.
+| Banner | Color treatment |
+|---|---|
+| DMAST | Forest green surface, emerald network accents and the existing gold/green mark |
+| AST | Purple surface, silver/lavender rings and the existing AST symbol |
+| HYPE / Hyperliquid | Deep teal surface, mint liquidity rings and Hyperliquid symbol |
+| PancakeSwap | Light sky-blue surface, cyan and cream details with the official rabbit icon |
+| ASTER | Warm charcoal surface, sand-gold geometry and the existing ASTER mark |
 
-The AST liquidity-pool banner keeps the existing native orbit design. The homepage order is DMAST, AST, HYPE, PancakeSwap, ASTER. All cards resolve their destination through `appId`, so changing an app’s canonical website updates the corresponding banner action without adding another link field.
+These palette treatments reference each project’s existing icon and brand presentation; they are not a claim that every chosen shade is an official brand-kit token. Primary references include [Hyperliquid’s brand kit](https://hyperliquid.gitbook.io/hyperliquid-docs/brand-kit), [PancakeSwap](https://pancake.xyz/) and [ASTER’s media kit](https://docs.asterdex.com/brand-and-community). The DMAST and AST marks come from the existing approved project assets.
 
-The SVGs embed the public project icons and can be edited in a vector editor. Export at their original size as WebP (the current output uses Sharp 0.35.5 with quality 91), retain the catalog’s 512 KiB limit and use a new versioned filename when changing artwork. Run the catalog build after exporting.
+The homepage order and website destinations remain DMAST, AST, HYPE, PancakeSwap, ASTER. Every card resolves its destination through `appId`. The optional `theme` object now also controls background, border, text, badge and CTA colors, so the native renderer does not apply a fixed purple overlay to a non-purple brand. Missing themes retain the legacy default.
+
+Edit the SVGs in a vector editor and export at the original size as WebP (the current output uses Sharp 0.35.5 with quality 91). Retain the 512 KiB limit and use a new filename when changing artwork. Keep the text-area background consistent with `theme.background`. Do not bake translated copy or a second CTA into the image.

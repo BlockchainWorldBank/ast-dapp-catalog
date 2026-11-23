@@ -34,3 +34,7 @@ Banner 保留原字段，并增加可选的多语言 `eyebrow`（顶部标签）
 新增 HYPE、PancakeSwap、ASTER 三张官网 Banner，并新增 DMAST 链上交易所首图；保留 AST 超级合约流动池，总计五张。可编辑背景源文件见 [Banner 设计](design/README.md)。社区热门工具的首列自上而下固定为 DMAST 链上交易所、AST 超级合约流动池、DefiLlama，其余项目保留在后续列。
 
 DMAST 配置使用标准地址 `https://dm.astai.org/`，官网会自动进入 `#home`。已通过独立浏览器只读检查确认最终地址为用户指定的 `https://dm.astai.org/#home`；不把片段写入目录，以保持现有钱包解码器兼容。
+
+### Revision 4 独立品牌主题
+
+五张 Banner 分别使用 DMAST 翠绿金色、AST 银紫色、HYPE 薄荷绿、PancakeSwap 天蓝奶油色和 ASTER 黑金砂色。背景图、标签、文字与按钮配色由每张 Banner 的可选 `theme` 对象统一控制，字段为 `background`、`accent`、`accentSecondary`、`text`、`mutedText`、`buttonText`，均为六位十六进制颜色。没有该对象时保留旧版默认配色。完整主题效果需要支持该字段的新原生客户端；旧客户端仍使用原有紫色标签与按钮。

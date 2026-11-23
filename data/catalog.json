@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 3,
+  "revision": 4,
   "categories": [
     {
       "id": "ai",
@@ -82,9 +82,17 @@
         "zh-Hans": "访问官网",
         "en": "Visit website"
       },
-      "image": "assets/banners/dmast-feature-v1.webp",
+      "image": "assets/banners/dmast-feature-v2.webp",
       "appId": "dmast",
-      "style": "image"
+      "style": "image",
+      "theme": {
+        "background": "#062A1D",
+        "accent": "#45E6A2",
+        "accentSecondary": "#24CB83",
+        "text": "#F1FFF6",
+        "mutedText": "#BDDECB",
+        "buttonText": "#052719"
+      }
     },
     {
       "id": "ast-feature",
@@ -108,9 +116,17 @@
         "zh-Hans": "立即进入",
         "en": "Explore now"
       },
-      "image": "assets/banners/ast-orbit-v1.webp",
+      "image": "assets/banners/ast-feature-v2.webp",
       "appId": "ast",
-      "style": "orbit"
+      "style": "image",
+      "theme": {
+        "background": "#1E123B",
+        "accent": "#C8AEFF",
+        "accentSecondary": "#AC8EE6",
+        "text": "#F8F3FF",
+        "mutedText": "#D0C3E3",
+        "buttonText": "#251342"
+      }
     },
     {
       "id": "hyperliquid-feature",
@@ -134,9 +150,17 @@
         "zh-Hans": "访问官网",
         "en": "Visit website"
       },
-      "image": "assets/banners/hyperliquid-feature-v1.webp",
+      "image": "assets/banners/hyperliquid-feature-v2.webp",
       "appId": "hyperliquid",
-      "style": "image"
+      "style": "image",
+      "theme": {
+        "background": "#052F2B",
+        "accent": "#97FCE4",
+        "accentSecondary": "#5CDEC2",
+        "text": "#F1FFF9",
+        "mutedText": "#B7DFD1",
+        "buttonText": "#042C24"
+      }
     },
     {
       "id": "pancakeswap-feature",
@@ -160,9 +184,17 @@
         "zh-Hans": "访问官网",
         "en": "Visit website"
       },
-      "image": "assets/banners/pancakeswap-feature-v1.webp",
+      "image": "assets/banners/pancakeswap-feature-v2.webp",
       "appId": "pancakeswap",
-      "style": "image"
+      "style": "image",
+      "theme": {
+        "background": "#EAFBFF",
+        "accent": "#1FC7D4",
+        "accentSecondary": "#78DCE6",
+        "text": "#280D37",
+        "mutedText": "#574465",
+        "buttonText": "#173744"
+      }
     },
     {
       "id": "aster-feature",
@@ -186,9 +218,17 @@
         "zh-Hans": "访问官网",
         "en": "Visit website"
       },
-      "image": "assets/banners/aster-feature-v1.webp",
+      "image": "assets/banners/aster-feature-v2.webp",
       "appId": "aster",
-      "style": "image"
+      "style": "image",
+      "theme": {
+        "background": "#211911",
+        "accent": "#F4D4A4",
+        "accentSecondary": "#DBB37D",
+        "text": "#FFF8EB",
+        "mutedText": "#D8C3A4",
+        "buttonText": "#2A1C0F"
+      }
     }
   ],
   "apps": [
