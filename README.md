@@ -38,3 +38,7 @@ DMAST 配置使用标准地址 `https://dm.astai.org/`，官网会自动进入 `
 ### Revision 4 独立品牌主题
 
 五张 Banner 分别使用 DMAST 翠绿金色、AST 银紫色、HYPE 薄荷绿、PancakeSwap 天蓝奶油色和 ASTER 黑金砂色。背景图、标签、文字与按钮配色由每张 Banner 的可选 `theme` 对象统一控制，字段为 `background`、`accent`、`accentSecondary`、`text`、`mutedText`、`buttonText`，均为六位十六进制颜色。没有该对象时保留旧版默认配色。完整主题效果需要支持该字段的新原生客户端；旧客户端仍使用原有紫色标签与按钮。
+
+### Revision 5 全幅背景与顺序
+
+Banner 顺序调整为 AST 超级合约流动池、DMAST 链上交易所、HYPE、PancakeSwap、ASTER。每张卡片从左至右使用对应项目主题色。配套原生客户端将图片改为满铺裁切，消除不同宽高比下的左右留边，并将缺失主题的兜底色改为中性色。社区工具顺序与官网地址保持不变。

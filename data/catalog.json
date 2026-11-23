@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 4,
+  "revision": 5,
   "categories": [
     {
       "id": "ai",
@@ -61,40 +61,6 @@
   ],
   "banners": [
     {
-      "id": "dmast-feature",
-      "title": {
-        "zh-Hans": "DMAST链上交易所",
-        "en": "DMAST On-chain Exchange"
-      },
-      "subtitle": {
-        "zh-Hans": "链上资产 · 市场行情 · 连接交易生态",
-        "en": "On-chain assets · Markets · Trading ecosystem"
-      },
-      "eyebrow": {
-        "zh-Hans": "DMAST · ON-CHAIN",
-        "en": "DMAST · ON-CHAIN"
-      },
-      "badge": {
-        "zh-Hans": "交易所",
-        "en": "Exchange"
-      },
-      "cta": {
-        "zh-Hans": "访问官网",
-        "en": "Visit website"
-      },
-      "image": "assets/banners/dmast-feature-v2.webp",
-      "appId": "dmast",
-      "style": "image",
-      "theme": {
-        "background": "#062A1D",
-        "accent": "#45E6A2",
-        "accentSecondary": "#24CB83",
-        "text": "#F1FFF6",
-        "mutedText": "#BDDECB",
-        "buttonText": "#052719"
-      }
-    },
-    {
       "id": "ast-feature",
       "title": {
         "zh-Hans": "AST超级合约流动池",
@@ -126,6 +92,40 @@
         "text": "#F8F3FF",
         "mutedText": "#D0C3E3",
         "buttonText": "#251342"
+      }
+    },
+    {
+      "id": "dmast-feature",
+      "title": {
+        "zh-Hans": "DMAST链上交易所",
+        "en": "DMAST On-chain Exchange"
+      },
+      "subtitle": {
+        "zh-Hans": "链上资产 · 市场行情 · 连接交易生态",
+        "en": "On-chain assets · Markets · Trading ecosystem"
+      },
+      "eyebrow": {
+        "zh-Hans": "DMAST · ON-CHAIN",
+        "en": "DMAST · ON-CHAIN"
+      },
+      "badge": {
+        "zh-Hans": "交易所",
+        "en": "Exchange"
+      },
+      "cta": {
+        "zh-Hans": "访问官网",
+        "en": "Visit website"
+      },
+      "image": "assets/banners/dmast-feature-v2.webp",
+      "appId": "dmast",
+      "style": "image",
+      "theme": {
+        "background": "#062A1D",
+        "accent": "#45E6A2",
+        "accentSecondary": "#24CB83",
+        "text": "#F1FFF6",
+        "mutedText": "#BDDECB",
+        "buttonText": "#052719"
       }
     },
     {
