@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "AST Wallet Dapp catalog",
+  "title": "DM Wallet DApp catalog",
   "type": "object",
   "additionalProperties": false,
   "required": ["schemaVersion", "revision", "categories", "banners", "apps", "homeSections"],

@@ -130,7 +130,8 @@ if (process.argv.includes('--build')) {
   for (const [name, data] of new Map([
     ...assets,
     ['catalog.json', catalogBytes],
-    ['index.html', '<!doctype html><html lang="en"><meta charset="utf-8"><title>AST Wallet Dapp catalog</title><h1>AST Wallet Dapp catalog</h1><a href="catalog.json">Open catalog JSON</a></html>\n'],
+    ['index.html', await readFile(resolve(root, 'site-src/index.html'))],
+    ['dm-wallet-icon.png', await readFile(resolve(root, 'docs/images/dm-wallet-icon.png'))],
   ])) {
     const path = resolve(site, name);
     await mkdir(dirname(path), { recursive: true });

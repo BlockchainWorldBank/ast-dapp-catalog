@@ -1,44 +1,166 @@
-# AST Wallet Dapp 目录
+<div align="center">
 
-安卓和 iOS 共用的公开应用目录。[查看线上 JSON](https://blockchainworldbank.github.io/ast-dapp-catalog/catalog.json)
+<img src="docs/images/dm-wallet-icon.png" width="96" height="96" alt="DM Wallet">
 
-### 更新目录
+# DM Wallet
 
-1. 编辑 [data/catalog.json](data/catalog.json) 和 `assets/`。数组顺序决定分类、Banner 和应用的展示顺序。替换图片时使用新文件名。
-2. 增加 `revision`。下架应用时将 `status` 设为 `disabled`，恢复旧内容时也使用新的 `revision`。
-3. 核对目标域名、来源和应用支持的链后提交 PR。合并到 `main` 后，Actions 校验并发布新目录。
+多链 Web3 钱包 · 安卓版本发布与 DApp 目录
 
-结构由 [JSON Schema](schema/catalog.schema.json) 定义。`startsAt` 和 `endsAt` 采用 UTC。Banner 通过 `appId` 指向应用条目。每个条目至少提供简体中文和英文。链 ID 依据 [浏览器链键快照](schema/browser-chains.json)，实际连接和签名仍由原生浏览器按其支持的网络处理。仓库只保存公开应用信息和图片。
+[下载安卓版](https://github.com/BlockchainWorldBank/ast-dapp-catalog/releases/latest) · [DApp 目录](https://blockchainworldbank.github.io/ast-dapp-catalog/catalog.json) · [English](#english)
 
-本地校验运行 `npm ci --ignore-scripts`，再运行 `npm run check`。运行 `npm run build` 生成可发布目录。
+</div>
 
-### 首批应用参考
+---
 
-- [Uniswap 支持网络](https://support.uniswap.org/hc/en-us/articles/40074184880525-Networks-on-Uniswap)
-- [Aave 入口与网络](https://aave.com/help/aave-101/accessing-aave)
-- [Sui 主网及浏览器](https://docs.sui.io/develop/sui-architecture/networks)
-- [Blockscout](https://eth.blockscout.com/)
+## 仓库内容
 
-### DM Wallet 发现页扩展
+本仓库是 DM Wallet 对外发布的公开仓库，只保存安装包、版本信息、DApp 应用信息和图片，不包含钱包源码、签名密钥或任何用户数据。
 
-Revision 2 增加 AI、预测、RWA、永续合约、Meme 等分类和分组列表，包含 18 个应用、7 个首页分组和 2 个 Banner。首页与收藏由客户端提供，不写入分类配置。
+| 内容 | 位置 | 用途 |
+|---|---|---|
+| 安卓安装包 | [Releases](https://github.com/BlockchainWorldBank/ast-dapp-catalog/releases) | 每个版本一个 Release，附带安装包 |
+| 版本清单 | 每个 Release 中的 `wallet-release.json` | DM Wallet 安卓版据此检查和校验更新 |
+| DApp 目录 | [`data/catalog.json`](data/catalog.json)，发布到 [GitHub Pages](https://blockchainworldbank.github.io/ast-dapp-catalog/catalog.json) | 钱包「发现」页的分类、Banner 和应用列表 |
 
-Banner 保留原字段，并增加可选的多语言 `eyebrow`（顶部标签）、`badge`（角标）、`cta`（按钮文案）和 `style`（`image` 或 `orbit`）字段。`orbit` 由两端用 DM 紫色绘制轨道图形，正文和按钮仍来自配置；省略时使用图片。AST 文案为“AST超级合约流动池 / 连接生态 · 探索链上流动性 / 立即进入”。
+## 下载与安装
 
-公开应用图标来源见 [图标来源](assets/SOURCES.md)。配置通过校验后，在钱包仓库运行 `python3 scripts/sync-dapp-catalog.py "../DM Wallet Catalog"` 同步两端内置快照；运行相同命令加 `--check` 可核对一致性。原有 GitHub Pages 发布流程保持不变。
+1. 打开 [最新版本](https://github.com/BlockchainWorldBank/ast-dapp-catalog/releases/latest)，下载 Assets 中的 `.apk` 文件。
+2. 如系统提示，允许浏览器或文件管理器安装应用。
+3. 已安装 DM Wallet 时直接覆盖安装，钱包数据会保留。
 
-### Revision 3 内容与 Banner
+本仓库只发布安卓版。
 
-所有应用的简体中文介绍均至少包含 30 个汉字，英文介绍至少 30 个字符，仍受每种语言最多 160 个字符的约束。校验脚本会阻止短介绍再次进入目录。文案根据各项目官网与官方文档独立撰写，来源见 [内容依据](docs/content-sources.md)。
+### 应用内更新
 
-新增 HYPE、PancakeSwap、ASTER 三张官网 Banner，并新增 DMAST 链上交易所首图；保留 AST 超级合约流动池，总计五张。可编辑背景源文件见 [Banner 设计](design/README.md)。社区热门工具的首列自上而下固定为 DMAST 链上交易所、AST 超级合约流动池、DefiLlama，其余项目保留在后续列。
+DM Wallet 安卓版在启动和回到前台时检查本仓库的最新版本。发现新版本后，会提示版本号和更新说明，用户确认后在应用内下载并调起系统安装。安装前会自动完成以下校验，任何一项不符都会删除安装包并拒绝安装：
 
-DMAST 配置使用标准地址 `https://dm.astai.org/`，官网会自动进入 `#home`。已通过独立浏览器只读检查确认最终地址为用户指定的 `https://dm.astai.org/#home`；不把片段写入目录，以保持现有钱包解码器兼容。
+- 文件大小和 SHA-256 与版本清单一致
+- 包名、版本号与清单一致，且版本高于当前安装的版本
+- 签名证书与当前安装的应用一致
 
-### Revision 4 独立品牌主题
+下载地址固定为本仓库的 Release，只使用 HTTPS。
 
-五张 Banner 分别使用 DMAST 翠绿金色、AST 银紫色、HYPE 薄荷绿、PancakeSwap 天蓝奶油色和 ASTER 黑金砂色。背景图、标签、文字与按钮配色由每张 Banner 的可选 `theme` 对象统一控制，字段为 `background`、`accent`、`accentSecondary`、`text`、`mutedText`、`buttonText`，均为六位十六进制颜色。没有该对象时保留旧版默认配色。完整主题效果需要支持该字段的新原生客户端；旧客户端仍使用原有紫色标签与按钮。
+### 手动校验安装包
 
-### Revision 5 全幅背景与顺序
+每个 Release 的说明中都列出了安装包的 SHA-256。下载后可自行核对：
 
-Banner 顺序调整为 AST 超级合约流动池、DMAST 链上交易所、HYPE、PancakeSwap、ASTER。每张卡片从左至右使用对应项目主题色。配套原生客户端将图片改为满铺裁切，消除不同宽高比下的左右留边，并将缺失主题的兜底色改为中性色。社区工具顺序与官网地址保持不变。
+```bash
+# macOS / Linux
+shasum -a 256 <安装包文件名>.apk
+
+# Windows
+certutil -hashfile <安装包文件名>.apk SHA256
+```
+
+输出结果应与 Release 说明中的值完全一致。
+
+## 版本规则
+
+- 版本号采用 `主版本.次版本.修订号`，从 `0.0.1` 开始。
+- 每个版本对应一个标签 `wallet-<版本号>`，最新的 Release 即当前版本。
+- 版本可以设定最低支持版本。低于该版本的安装会收到必须更新的提示，无法跳过。
+- 可选更新可以跳过。被跳过的版本不再提示，直到有更新的版本发布，或该版本变为必须更新。
+
+<details>
+<summary>版本清单格式</summary>
+
+```json
+{
+  "schemaVersion": 1,
+  "releases": [
+    {
+      "store": "apkUniversal",
+      "version": "0.0.2",
+      "minimumVersion": "0.0.1",
+      "file": {
+        "sha256": "<安装包 SHA-256>",
+        "size": 83296292,
+        "signer": "<签名证书 SHA-256>"
+      },
+      "notes": {
+        "zh": "更新说明",
+        "en": "Release notes"
+      }
+    }
+  ]
+}
+```
+
+| 字段 | 说明 |
+|---|---|
+| `version` | 本次发布的版本号 |
+| `minimumVersion` | 可选。低于此版本时更新为必须 |
+| `file.sha256` / `file.size` | 安装包的 SHA-256 和字节数，应用下载后逐一核对 |
+| `file.signer` | 签名证书的 SHA-256，供发布时核对签名未变 |
+| `notes` | 更新说明，按应用语言显示，缺少该语言时显示英文 |
+
+</details>
+
+## DApp 目录
+
+DM Wallet 的「发现」页从 GitHub Pages 读取目录。应用内置一份目录快照，线上目录无法读取时使用快照。
+
+| 路径 | 说明 |
+|---|---|
+| [`data/catalog.json`](data/catalog.json) | 目录数据：分类、首页分组、Banner 和应用 |
+| [`assets/`](assets) | 应用图标和 Banner 图片，来源见 [SOURCES.md](assets/SOURCES.md) |
+| [`schema/catalog.schema.json`](schema/catalog.schema.json) | 目录结构定义 |
+| [`schema/browser-chains.json`](schema/browser-chains.json) | 可用的链 ID |
+| [`design/`](design) | Banner 可编辑源文件与配色说明 |
+| [`docs/content-sources.md`](docs/content-sources.md) | 应用介绍的撰写依据 |
+| [`docs/CHANGELOG.md`](docs/CHANGELOG.md) | 目录各版本的变更记录 |
+
+### 更新规则
+
+1. 修改 `data/catalog.json` 或 `assets/` 时必须增加 `revision`。数组顺序即展示顺序，替换图片时使用新文件名。
+2. 下架应用时将 `status` 设为 `disabled`；恢复旧内容同样使用新的 `revision`。
+3. 每个条目至少提供简体中文和英文，每种语言的文字不超过 160 个字符。应用介绍的中文不少于 30 个汉字，英文不少于 30 个字符，不得包含收益承诺、用户数量或排名。
+4. 应用支持的链使用 `schema/browser-chains.json` 中的链 ID。实际连接和签名由钱包内置浏览器按其支持的网络处理。
+5. Banner 通过 `appId` 指向应用，`startsAt` 和 `endsAt` 采用 UTC。可选的 `theme` 对象以六位十六进制颜色控制背景、强调色、文字和按钮配色。
+6. 变更合并到 `main` 后，GitHub Actions 自动校验并发布到 GitHub Pages。
+
+### 本地校验
+
+需要 Node.js（CI 使用 24 版）。
+
+```bash
+npm ci --ignore-scripts
+npm run check   # 校验结构、图片、链 ID、介绍长度和 revision
+npm run build   # 生成待发布的 site/ 目录
+```
+
+## 安全提示
+
+- 只从本仓库的 Releases 下载 DM Wallet，不要安装来源不明的安装包。
+- 助记词和私钥只保存在你的设备上。任何人以任何理由索要，都是诈骗。
+- DApp 目录仅提供访问入口，不构成对任何项目的推荐或担保。连接 DApp 和签名前，请自行核对网址与交易内容。
+
+---
+
+<a id="english"></a>
+
+## English
+
+DM Wallet is a multi-chain Web3 wallet. This public repository publishes the Android app, its update manifest and the DApp catalog shown on the wallet's Discover page. It contains no wallet source code, signing keys or user data.
+
+### Download
+
+Download the `.apk` from the [latest release](https://github.com/BlockchainWorldBank/ast-dapp-catalog/releases/latest) and install it. Installing over an existing DM Wallet keeps your wallets. Only the Android app is published here.
+
+### In-app updates
+
+The Android app checks this repository's latest release when it opens or returns to the foreground. It shows the new version and its release notes, then downloads the package inside the app. Before handing it to the system installer, the app verifies the file size and SHA-256 against the manifest, the package name and version, and that the package is signed with the same certificate as the installed app. A package that fails any check is deleted. Downloads always come from this repository's releases over HTTPS.
+
+Each release lists the SHA-256 of its package, so you can verify a manual download with `shasum -a 256` (macOS, Linux) or `certutil -hashfile <file> SHA256` (Windows).
+
+### Versions
+
+Versions use `Major.Minor.Patch`, starting at `0.0.1`, and each release is tagged `wallet-<version>`. A release can set a minimum version: installations below it must update and cannot skip the prompt. Optional updates can be skipped until a newer version is published or the skipped one becomes required.
+
+### DApp catalog
+
+The Discover page reads [`catalog.json`](https://blockchainworldbank.github.io/ast-dapp-catalog/catalog.json) from GitHub Pages and falls back to the snapshot bundled with the app. The structure is defined by [`schema/catalog.schema.json`](schema/catalog.schema.json). Every change to the catalog or its images increases `revision`. Each entry carries Simplified Chinese and English text of at most 160 characters; app introductions need at least 30 Chinese characters and 30 English characters and contain no return promises, user counts or rankings. Run `npm ci --ignore-scripts` and `npm run check` to validate locally, and `npm run build` to produce the site.
+
+### Safety
+
+Install DM Wallet only from this repository's releases. Your recovery phrase and private keys stay on your device; anyone who asks for them is a scammer. Listing in the catalog is not an endorsement: check the address and transaction before you connect or sign.
