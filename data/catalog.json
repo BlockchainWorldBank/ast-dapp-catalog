@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 2,
+  "revision": 3,
   "categories": [
     {
       "id": "ai",
@@ -61,6 +61,32 @@
   ],
   "banners": [
     {
+      "id": "dmast-feature",
+      "title": {
+        "zh-Hans": "DMAST链上交易所",
+        "en": "DMAST On-chain Exchange"
+      },
+      "subtitle": {
+        "zh-Hans": "链上资产 · 市场行情 · 连接交易生态",
+        "en": "On-chain assets · Markets · Trading ecosystem"
+      },
+      "eyebrow": {
+        "zh-Hans": "DMAST · ON-CHAIN",
+        "en": "DMAST · ON-CHAIN"
+      },
+      "badge": {
+        "zh-Hans": "交易所",
+        "en": "Exchange"
+      },
+      "cta": {
+        "zh-Hans": "访问官网",
+        "en": "Visit website"
+      },
+      "image": "assets/banners/dmast-feature-v1.webp",
+      "appId": "dmast",
+      "style": "image"
+    },
+    {
       "id": "ast-feature",
       "title": {
         "zh-Hans": "AST超级合约流动池",
@@ -87,30 +113,82 @@
       "style": "orbit"
     },
     {
-      "id": "defi-feature",
+      "id": "hyperliquid-feature",
       "title": {
-        "zh-Hans": "探索多链 DeFi",
-        "en": "Explore multi-chain DeFi"
+        "zh-Hans": "HYPE · Hyperliquid",
+        "en": "HYPE · Hyperliquid"
       },
       "subtitle": {
-        "zh-Hans": "发现应用 · 连接链上世界",
-        "en": "Discover apps · Connect on-chain"
+        "zh-Hans": "探索现货与永续的链上交易生态",
+        "en": "Explore on-chain spot and perpetual markets"
       },
       "eyebrow": {
-        "zh-Hans": "DM WALLET · DISCOVER",
-        "en": "DM WALLET · DISCOVER"
+        "zh-Hans": "HYPE · HYPERLIQUID",
+        "en": "HYPE · HYPERLIQUID"
       },
       "badge": {
-        "zh-Hans": "DeFi",
-        "en": "DeFi"
+        "zh-Hans": "链上交易",
+        "en": "On-chain trading"
       },
       "cta": {
-        "zh-Hans": "立即探索",
-        "en": "Explore now"
+        "zh-Hans": "访问官网",
+        "en": "Visit website"
       },
-      "image": "assets/banners/ast-orbit-v1.webp",
-      "appId": "uniswap",
-      "style": "orbit"
+      "image": "assets/banners/hyperliquid-feature-v1.webp",
+      "appId": "hyperliquid",
+      "style": "image"
+    },
+    {
+      "id": "pancakeswap-feature",
+      "title": {
+        "zh-Hans": "PancakeSwap 多链兑换",
+        "en": "PancakeSwap Multi-chain Swaps"
+      },
+      "subtitle": {
+        "zh-Hans": "代币兑换 · 流动性 · 探索多链生态",
+        "en": "Token swaps · Liquidity · Multi-chain ecosystem"
+      },
+      "eyebrow": {
+        "zh-Hans": "CAKE · PANCAKESWAP",
+        "en": "CAKE · PANCAKESWAP"
+      },
+      "badge": {
+        "zh-Hans": "多链兑换",
+        "en": "Multi-chain swaps"
+      },
+      "cta": {
+        "zh-Hans": "访问官网",
+        "en": "Visit website"
+      },
+      "image": "assets/banners/pancakeswap-feature-v1.webp",
+      "appId": "pancakeswap",
+      "style": "image"
+    },
+    {
+      "id": "aster-feature",
+      "title": {
+        "zh-Hans": "ASTER 链上衍生品",
+        "en": "ASTER On-chain Markets"
+      },
+      "subtitle": {
+        "zh-Hans": "现货与永续，发现多链交易体验",
+        "en": "Discover spot and perpetual trading"
+      },
+      "eyebrow": {
+        "zh-Hans": "ASTER · DISCOVER",
+        "en": "ASTER · DISCOVER"
+      },
+      "badge": {
+        "zh-Hans": "现货与永续",
+        "en": "Spot & perpetuals"
+      },
+      "cta": {
+        "zh-Hans": "访问官网",
+        "en": "Visit website"
+      },
+      "image": "assets/banners/aster-feature-v1.webp",
+      "appId": "aster",
+      "style": "image"
     }
   ],
   "apps": [
@@ -121,8 +199,8 @@
         "en": "AST Super Contract Liquidity Pool"
       },
       "summary": {
-        "zh-Hans": "连接生态 · 探索链上流动性",
-        "en": "Connect ecosystems · Explore on-chain liquidity"
+        "zh-Hans": "围绕 AST 生态打造的超级合约流动池入口，连接链上资产与流动性应用，帮助用户了解生态服务、参与规则及相关链上交互信息。",
+        "en": "Explore the AST ecosystem, contract liquidity pools and on-chain applications, with access to participation rules and ecosystem services."
       },
       "url": "https://www.astai.org/",
       "icon": "assets/apps/ast-v1.webp",
@@ -141,8 +219,8 @@
         "en": "Uniswap"
       },
       "summary": {
-        "zh-Hans": "去中心化代币兑换",
-        "en": "Decentralized token swaps"
+        "zh-Hans": "面向多条区块链网络的去中心化交易协议，用户可连接钱包进行代币兑换、提供流动性，并查看交易价格、资金池及相关市场信息。",
+        "en": "Swap tokens across supported networks, explore liquidity pools and provide liquidity through the Uniswap decentralized trading protocol."
       },
       "url": "https://app.uniswap.org/",
       "icon": "assets/apps/uniswap-v2.png",
@@ -163,8 +241,8 @@
         "en": "Aave"
       },
       "summary": {
-        "zh-Hans": "链上资产借贷市场",
-        "en": "On-chain asset lending markets"
+        "zh-Hans": "提供链上资产存入与抵押借贷服务的去中心化协议，用户可查看不同市场的资产供需、借款利率及抵押参数，并管理自己的借贷仓位。",
+        "en": "Supply crypto assets, borrow against collateral and review market rates, collateral parameters and account positions in Aave lending markets."
       },
       "url": "https://app.aave.com/",
       "icon": "assets/apps/aave-v2.png",
@@ -185,8 +263,8 @@
         "en": "Suiscan"
       },
       "summary": {
-        "zh-Hans": "查看 Sui 主网的交易与对象",
-        "en": "Explore Sui transactions and objects"
+        "zh-Hans": "面向 Sui 网络的区块链浏览器，支持查询交易记录、钱包地址、代币和链上对象，帮助用户追踪资产变化、核对交互状态及了解网络活动。",
+        "en": "Explore Sui transactions, addresses, tokens and on-chain objects to inspect network activity, follow asset movements and check transaction status."
       },
       "url": "https://suiscan.xyz/mainnet/home",
       "icon": "assets/apps/suiscan-v2.png",
@@ -205,8 +283,8 @@
         "en": "Blockscout"
       },
       "summary": {
-        "zh-Hans": "查询以太坊交易和地址",
-        "en": "Explore Ethereum transactions and addresses"
+        "zh-Hans": "开源区块链浏览器与链上数据查询工具，可用于查看地址余额、交易详情、代币转账及合约信息，帮助用户核对链上操作和追踪网络活动。",
+        "en": "Inspect blockchain transactions, address activity, token transfers and smart contracts with the open-source Blockscout explorer."
       },
       "url": "https://eth.blockscout.com/",
       "icon": "assets/apps/blockscout-v2.png",
@@ -225,10 +303,10 @@
         "en": "Hyperliquid"
       },
       "summary": {
-        "zh-Hans": "高性能去中心化永续合约交易",
-        "en": "Decentralized perpetual trading"
+        "zh-Hans": "以链上交易为核心的去中心化金融生态，提供现货与永续合约市场，用户可了解交易产品、流动性设施及网络应用，并访问官方交易入口。",
+        "en": "Explore Hyperliquid spot and perpetual markets, on-chain trading infrastructure, liquidity tools and ecosystem applications through its official site."
       },
-      "url": "https://app.hyperliquid.xyz/trade",
+      "url": "https://hyperliquid.xyz/",
       "icon": "assets/apps/hyperliquid-v1.png",
       "categoryIds": [
         "perpetuals",
@@ -246,10 +324,10 @@
         "en": "PancakeSwap"
       },
       "summary": {
-        "zh-Hans": "多链去中心化交易与流动性",
-        "en": "Multi-chain swaps and liquidity"
+        "zh-Hans": "覆盖多条区块链网络的去中心化交易平台，提供代币兑换、流动性资金池及生态应用入口，方便用户查询市场信息并连接钱包参与链上交互。",
+        "en": "Discover PancakeSwap token swaps, liquidity pools and ecosystem applications across supported blockchain networks, with wallet-based access."
       },
-      "url": "https://pancakeswap.finance/",
+      "url": "https://pancake.xyz/",
       "icon": "assets/apps/pancakeswap-v1.png",
       "categoryIds": [
         "defi",
@@ -269,8 +347,8 @@
         "en": "Curve"
       },
       "summary": {
-        "zh-Hans": "稳定币兑换与链上流动性",
-        "en": "Stablecoin swaps and liquidity"
+        "zh-Hans": "专注稳定币及相关资产流动性的去中心化交易协议，用户可查看资金池与兑换报价、提供流动性，并了解不同池子的资产构成和运作方式。",
+        "en": "Explore Curve liquidity pools and swap quotes for stablecoins and related assets, review pool composition and access liquidity provision tools."
       },
       "url": "https://curve.finance/",
       "icon": "assets/apps/curve-v1.webp",
@@ -289,8 +367,8 @@
         "en": "Virtuals Protocol"
       },
       "summary": {
-        "zh-Hans": "创建与探索链上 AI 智能体",
-        "en": "Explore on-chain AI agents"
+        "zh-Hans": "围绕人工智能代理构建的链上应用生态，提供智能体项目发现与参与入口，帮助用户了解代理应用、代币化机制及相关生态协作场景。",
+        "en": "Discover AI agents and their applications in the Virtuals ecosystem, including agent projects, tokenized participation and collaboration tools."
       },
       "url": "https://app.virtuals.io/",
       "icon": "assets/apps/virtuals-v1.png",
@@ -309,8 +387,8 @@
         "en": "Olas"
       },
       "summary": {
-        "zh-Hans": "探索自主 AI 智能体生态",
-        "en": "Explore autonomous AI agents"
+        "zh-Hans": "面向自主人工智能代理的开放生态，连接开发者、代理应用与链上服务，用户可探索相关工具、了解协作机制，并查看代理应用的实际使用场景。",
+        "en": "Explore the Olas ecosystem for autonomous AI agents, including developer tools, agent applications, ownership models and on-chain services."
       },
       "url": "https://olas.network/",
       "icon": "assets/apps/olas-v1.png",
@@ -331,8 +409,8 @@
         "en": "Four.Meme"
       },
       "summary": {
-        "zh-Hans": "基于 BNB Chain 的代币发行平台",
-        "en": "Token launch platform on BNB Chain"
+        "zh-Hans": "基于 BNB Chain 的社区代币发行与发现平台，提供项目创建、代币浏览及发行进度等信息，方便用户了解新兴社区项目与相关市场活动。",
+        "en": "Discover community tokens on BNB Chain, browse new projects and review token launch activity through the Four.Meme launch platform."
       },
       "url": "https://four.meme/",
       "icon": "assets/apps/four-meme-v1.webp",
@@ -351,8 +429,8 @@
         "en": "GMGN.AI"
       },
       "summary": {
-        "zh-Hans": "多链代币与链上地址数据分析",
-        "en": "Multi-chain token and wallet analytics"
+        "zh-Hans": "面向多链代币市场的数据与交易工具平台，汇集新代币监测、持仓地址分析和链上资金动态，帮助用户观察市场变化并研究相关交易信息。",
+        "en": "Monitor new tokens, analyze holders and wallet activity, and explore multi-chain market data and trading tools through GMGN.AI."
       },
       "url": "https://gmgn.ai/",
       "icon": "assets/apps/gmgn-v1.png",
@@ -374,8 +452,8 @@
         "en": "DEX Screener"
       },
       "summary": {
-        "zh-Hans": "多链 DEX 行情与代币数据",
-        "en": "Multi-chain DEX market data"
+        "zh-Hans": "聚合多条区块链上去中心化交易对的数据平台，提供价格走势、成交量、流动性及新交易对信息，方便用户建立观察列表并跟踪市场变化。",
+        "en": "Track decentralized trading pairs across chains with price charts, volume, liquidity and new-pair data, plus watchlists and market discovery tools."
       },
       "url": "https://dexscreener.com/",
       "icon": "assets/apps/dexscreener-v1.png",
@@ -397,8 +475,8 @@
         "en": "DefiLlama"
       },
       "summary": {
-        "zh-Hans": "DeFi 协议、流动性与链上数据",
-        "en": "DeFi protocols and on-chain analytics"
+        "zh-Hans": "聚合去中心化金融协议与多链生态数据的分析平台，涵盖锁仓规模、交易量、收益市场及稳定币等指标，方便用户比较项目并追踪行业变化。",
+        "en": "Compare DeFi protocols and blockchain ecosystems using DefiLlama data on total value locked, volumes, yield markets, stablecoins and more."
       },
       "url": "https://defillama.com/",
       "icon": "assets/apps/defillama-v1.png",
@@ -420,8 +498,8 @@
         "en": "Polymarket"
       },
       "summary": {
-        "zh-Hans": "探索链上事件预测市场",
-        "en": "Explore on-chain prediction markets"
+        "zh-Hans": "围绕现实世界事件构建的预测市场平台，覆盖政治、体育、经济与科技等主题，用户可查看市场价格、事件规则及结算信息，研究不同结果的市场预期。",
+        "en": "Explore prediction markets for real-world events, review market prices, outcome rules and resolution information across a range of topics."
       },
       "url": "https://polymarket.com/",
       "icon": "assets/apps/polymarket-v1.png",
@@ -440,8 +518,8 @@
         "en": "Ondo Finance"
       },
       "summary": {
-        "zh-Hans": "探索现实世界资产上链生态",
-        "en": "Explore tokenized real-world assets"
+        "zh-Hans": "致力于连接传统金融资产与区块链应用的现实世界资产生态，提供代币化产品和相关基础设施信息，帮助用户了解资产上链、产品规则及参与条件。",
+        "en": "Explore Ondo tokenized real-world assets and on-chain financial infrastructure, including product information, access requirements and ecosystem tools."
       },
       "url": "https://ondo.finance/",
       "icon": "assets/apps/ondo-v1.png",
@@ -460,8 +538,8 @@
         "en": "Pendle"
       },
       "summary": {
-        "zh-Hans": "链上收益与流动性市场",
-        "en": "On-chain yield and liquidity markets"
+        "zh-Hans": "围绕链上收益资产构建的去中心化市场，将本金与收益权益拆分为可交易资产，用户可比较市场到期时间、流动性及收益结构，并了解相关参与方式。",
+        "en": "Explore Pendle yield markets, compare maturities and liquidity, and learn how principal and yield tokens enable different on-chain yield strategies."
       },
       "url": "https://app.pendle.finance/",
       "icon": "assets/apps/pendle-v1.png",
@@ -482,8 +560,8 @@
         "en": "GMX"
       },
       "summary": {
-        "zh-Hans": "去中心化永续合约交易",
-        "en": "Decentralized perpetual markets"
+        "zh-Hans": "提供现货与永续合约交易的去中心化平台，连接链上交易市场和流动性资金池，用户可查看市场数据、交易参数及流动性信息，并管理相关交易仓位。",
+        "en": "Explore GMX spot and perpetual trading markets, review market and liquidity data, and access decentralized trading and liquidity provision tools."
       },
       "url": "https://app.gmx.io/",
       "icon": "assets/apps/gmx-v1.webp",
@@ -494,6 +572,52 @@
       "chains": [
         "arbitrum",
         "avalanchec"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "dmast",
+      "name": {
+        "zh-Hans": "DMAST链上交易所",
+        "en": "DMAST On-chain Exchange"
+      },
+      "summary": {
+        "zh-Hans": "连接链上资产与交易生态的 DMAST 交易所入口，提供市场行情、交易产品和生态服务信息，方便用户浏览平台功能并查看相关操作规则与参与条件。",
+        "en": "Explore DMAST on-chain exchange markets, trading products and ecosystem services, with access to platform information and participation rules."
+      },
+      "url": "https://dm.astai.org/",
+      "icon": "assets/apps/dmast-v1.png",
+      "categoryIds": [
+        "ecosystem",
+        "defi",
+        "tools"
+      ],
+      "chains": [
+        "smartchain",
+        "sui"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "aster",
+      "name": {
+        "zh-Hans": "ASTER",
+        "en": "ASTER"
+      },
+      "summary": {
+        "zh-Hans": "面向链上交易用户的去中心化交易平台，提供现货与永续合约等产品入口，用户可了解不同交易模式、支持网络、市场信息及相关风险和操作规则。",
+        "en": "Explore Aster spot and perpetual trading products, supported networks and market information, with access to trading modes and platform rules."
+      },
+      "url": "https://www.asterdex.com/",
+      "icon": "assets/apps/aster-v1.png",
+      "categoryIds": [
+        "perpetuals",
+        "defi"
+      ],
+      "chains": [
+        "smartchain",
+        "ethereum",
+        "arbitrum"
       ],
       "status": "active"
     }
@@ -523,9 +647,10 @@
       },
       "layout": "list",
       "appIds": [
+        "dmast",
+        "ast",
         "defillama",
         "gmgn",
-        "ast",
         "suiscan",
         "blockscout",
         "dexscreener"

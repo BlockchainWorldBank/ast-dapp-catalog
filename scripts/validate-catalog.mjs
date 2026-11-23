@@ -95,6 +95,8 @@ index(catalog.banners);
 index(catalog.homeSections);
 assert.ok(!categories.has('home') && !categories.has('favorites'), 'Client categories are reserved');
 for (const app of catalog.apps) {
+  assert.ok([...app.summary['zh-Hans']].filter(character => /\p{Script=Han}/u.test(character)).length >= 30,
+    `App introduction needs at least 30 Chinese characters: ${app.id}`);
   validateDomain(app.url);
   assert.ok(app.categoryIds.every(id => categories.has(id)), `Unknown category in ${app.id}`);
   assert.ok(app.chains.every(chain => browserChains.has(chain)), `Unsupported browser chain in ${app.id}`);

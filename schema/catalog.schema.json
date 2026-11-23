@@ -44,7 +44,7 @@
         "properties": {
           "id": { "$ref": "#/definitions/id" },
           "name": { "$ref": "#/definitions/title" },
-          "summary": { "$ref": "#/definitions/localized" },
+          "summary": { "allOf": [{ "$ref": "#/definitions/localized" }, { "type": "object", "properties": { "zh-Hans": { "type": "string", "minLength": 30 }, "en": { "type": "string", "minLength": 30 } } }] },
           "url": { "type": "string", "minLength": 9, "maxLength": 2048, "pattern": "^https://" },
           "icon": { "$ref": "#/definitions/image" },
           "categoryIds": { "type": "array", "minItems": 1, "maxItems": 30, "uniqueItems": true, "items": { "$ref": "#/definitions/id" } },
